@@ -24,7 +24,7 @@ public class MainExe {
 		//매개값으로 사용
 		Student std = new Student(sno, sname, score, height); //인스턴스
 		
-		StudentApp.add(std); //student 타입이 하나 만들어줌(바로위 매개값사용 괄호안에 std 넣어줌) true는 넣었다 false는 공간이 없어서 못넣었다.		
+//		StudentApp.add(std); //student 타입이 하나 만들어줌(바로위 매개값사용 괄호안에 std 넣어줌) true는 넣었다 false는 공간이 없어서 못넣었다.		
 		if(StudentApp.add(std)) {      //잘넣었으면 메세지 입력
 			System.out.println("입력성공!!");
 		}else {
@@ -36,7 +36,7 @@ public class MainExe {
 		Student[] list =  StudentApp.list();//리스트타입지정 
 		for (int i = 0 ; i < list.length; i ++) {
 			if(list[i] != null) {
-				list[i].showInfo();
+			list[i].showInfo();
 			}
 		}
 		System.out.println("조회완료!!");
@@ -46,7 +46,7 @@ public class MainExe {
 		System.out.println("학생 번호 >>>");
 		sno = scn.nextLine();
 		//정상적인 학번 체크
-		if (StudentApp.get(sno) == null) {
+		if (StudentApp.get(sno) != null) {
 			System.out.println("학생 번호 확인!!");
 			return; //메소드의 종료.
 		}					
@@ -63,7 +63,7 @@ public class MainExe {
 		if(StudentApp.modify(sno,score)) {
 			System.out.println("수정완료!!");
 		}else {
-			System.out.println("잘못된 학번입니다!!");
+			System.out.println("점수를 확인하세요!!");
 		}
 	}//end of update();
 	
@@ -76,9 +76,10 @@ public class MainExe {
 			System.out.println("잘못된 학번입니다!!");
 		}
 	}// end of delete.
-	public static void search() {
+	
+//	public static void search() {
 		
-	}//end of search.6. 단건조회
+//	}//end of search.6. 단건조회
 	
 public static void main(String[] args) {
 
@@ -87,7 +88,7 @@ public static void main(String[] args) {
 		boolean run = true;
 		
 		while(run) {
-			System.out.println("1.등록 2.목록 3.삭제 4.수정  9.종료");
+			System.out.println("1.등록 2.목록 3.수정 4.삭제  9.종료");
 			int menu = Integer.parseInt(scn.nextLine());
 			
 			switch(menu) {

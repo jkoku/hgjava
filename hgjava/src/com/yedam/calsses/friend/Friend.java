@@ -5,29 +5,31 @@ package com.yedam.calsses.friend;
 //get set
 public class Friend {
 	private String fname;
-	private String ftel;
+	private String fnum;
 	private int age;
 	
-	//생성자 : 기본 생성자(매개값이 없는) new Friend()	
 	public Friend() {
-	
+		
 	}
-	public Friend(String name, String tel) {
+	public Friend(String name, String num) {
 		fname = name;
-		ftel = tel;
+		fnum = num;
 	}
-	public Friend(String name, String tel, int age) {
-		this(name, tel);
+	public Friend(String fname, String fnum, int age) {
+		super();
+		this.fname = fname;
+		this.fnum = fnum;
 		this.age = age;
-	}
-
+	} 
 //메소드
 	void showInfo() {
-		System.out.printf("친구 이름은 %s, 연락처는 %s, 나이는%d 입니다./n", this.fname, this.ftel, this.age );
+		System.out.printf("친구 이름은 %s, 연락처는 %s, 나이는%d 입니다./n", this.fname, this.fnum, this.age );
 	}
+
 	String showInfoStr() {
 		return "이름은" + fname;
 	}
+	
 //getter/setter
 	public String getFname() {
 		return fname;
@@ -35,11 +37,11 @@ public class Friend {
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
-	public String getFtel() {
-		return ftel;
+	public String getFnum() {
+		return fnum;
 	}
-	public void setFtel(String ftel) {
-		this.ftel = ftel;
+	public void setFnum(String fnum) {
+		this.fnum = fnum;
 	}
 	public int getAge() {
 		return age;

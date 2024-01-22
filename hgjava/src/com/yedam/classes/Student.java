@@ -8,6 +8,7 @@ public class Student {  // student는 클래스이자 데이터타입의 하나�
 	private String sname;
 	private int score; //초기값 0
 	private	double height; //초기값 0.0  
+	private boolean onSchool;
 	//의미없는 값들어오는 것 방지하기 위하여 public 보다 private으로하고 그러면 다른 클래스에서 못쓰니까 메소드로 쓸수 있도록 해준다.
 	
 	//생성자 : 기본 생성자(매개값이 없는) new Friend() , 필드와 메소드는 없을 수 있지만 생성자는 꼭 있어야한다.
@@ -18,7 +19,7 @@ public class Student {  // student는 클래스이자 데이터타입의 하나�
 	public Student(String no, String name) {
 		sno = no;
 		sname= name;
-	}
+	} //public을 지우면 default 값이 되어 다른패키지에서 접근이 불가하다.
 	
 	public Student(String no, String name ,int score) {
 		this(no,name);
@@ -37,7 +38,7 @@ public class Student {  // student는 클래스이자 데이터타입의 하나�
 
 	//메소드 : 객체의 동작에 해당하는 실행블록 메소드는 반환값을 반드시 명시해야한다.
 	//void는 반환값이 없다는 의미 리턴구문이 따로 없다. 같은 변수명이 있다면 this.를 붙혀 객체임을 명시하면됨.
-	void showInfo() {
+	public void showInfo() {
 		System.out.printf("번호는 %s, 이름은 %s, 점수는 %d입니다.\n",this.sno, sname,score );
 	}
 	String showInfoStr() {
@@ -78,6 +79,14 @@ public class Student {  // student는 클래스이자 데이터타입의 하나�
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public boolean isOnSchool() {
+		return onSchool;
+	}
+
+	public void setOnSchool(boolean onSchool) {
+		this.onSchool = onSchool;
 	}
 
 	

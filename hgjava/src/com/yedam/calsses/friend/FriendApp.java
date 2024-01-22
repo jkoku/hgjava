@@ -4,16 +4,18 @@ package com.yedam.calsses.friend;
 
 public class FriendApp {
  // 필드 : 친구정보를 저장할 수 있는 배열. 
+	private static Friend[] friends;
 	
- Friend[] friends; 
-
-public FriendApp() {
-	friends = new Friend[10];
-}	
+	public FriendApp() {
+		friends = new Friend[10];
+	}
+	static {
+		friends = new Friend[10];
+	}
 	//등록
-	public boolean add (Friend frd) {
+	public static boolean add(Friend frd) {
 		for(int i = 0; i < friends.length; i++) {
-			if(friends[i] ==  null) {
+			if(friends[i] == null) {
 				friends[i] = frd;
 				return true;
 			}
@@ -21,36 +23,39 @@ public FriendApp() {
 		return false;
 	}
 	//수정
-	public boolean modify(String fname, String ftel) {
-		for(int i = 0; i < friends.length; i++) {
-			if(friends[i] ==  null && friends[i].getFname().equals(ftel)) {
-				friends[i] = setFtel(tel);
+	public static boolean modify(String fname, String fnum) {
+		for (int i = 0; i < friends.length; i++) {
+			if(friends[i] != null && friends[i].getFname().equals(fname)) {
+				friends[i].setFnum(fnum);
 				return true;
 			}
 		}
 		return false;
 	}
 	//삭제
-	public boolean remove(String fname) {
+	public static boolean remove (String fname) {
 		for(int i = 0; i < friends.length; i++) {
-			if(friends[i] !=  null && friends[i].getFname().equals(fname)) {
-				friends[i] =  null;
+			if (friends[i] != null && friends[i].getFname().equals(fname)) {
+				friends[i] = null;
 				return true;
 			}
 		}
-	return false;
+		return false;
 	}
+
 	// 목록
-	public Friend[] list() {
+	public static Friend[] list() {
 		return friends;
 	}
+
 	//단건조회
-	public Friend get(String name) {
+	public static Friend get(String fname) {
 		for(int i = 0; i < friends.length; i++) {
-			if(friends[i] !=  null && friends[i].getFname().equals(fname)) {
+			if(friends[i] != null && friends[i].getFname().equals(fname)) {
 				friends[i] = null;
 				return friends[i];
 			}
 		}
+		return null;
 	}
 }//end of class
