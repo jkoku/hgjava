@@ -68,7 +68,7 @@ public class FriendExe {
 					break;
 			
 			case 2: //목록이름
-					System.out.println("조회할 이름>>>"); // 홍길동 / ""
+					System.out.print("조회할 이름>>>"); // 홍길동 / ""
 					String fname =scn.nextLine();
 					Friend[] list;
 					if(fname.equals("")) {
@@ -85,20 +85,21 @@ public class FriendExe {
 					
 				case 3: //수정.
 				
-					String fphone = scn.nextLine();
-					Friend frnd = app.getFriend(fphone);
-					String info1 ="", info2 = "",
-					if(frnd instanceof UnivFriend)
-						System.out.println("학교");
-					info1 = scn.nextLine();
-					System.out.println("전공");
-					info2 =scn.nextLine();
-					else  if(frnd instanceof CompFriend) {
-						System.out.println("회사");
-						info1 + scn.nextLine();
-						System.out.println("부서")
-						info2 = scn.nextLine();
-					}
+//					String fphone = scn.nextLine();
+//					
+//					Friend frnd = app.getFriend(fphone);
+//					String info1 ="", info2 = "",
+//					if(frnd instanceof UnivFriend)
+//						System.out.println("학교");
+//					info1 = scn.nextLine();
+//					System.out.println("전공");
+//					info2 =scn.nextLine();
+//					else  if(frnd instanceof CompFriend) {
+//						System.out.println("회사");
+//						info1 + scn.nextLine();
+//						System.out.println("부서")
+//						info2 = scn.nextLine();
+//					}
 					
 					
 					System.out.println("수정할 연락처>>>");
@@ -113,6 +114,7 @@ public class FriendExe {
 						System.out.println("변경실패");
 					}
 					break;
+					
 				case 4: //삭제.
 					System.out.println("삭제할 연락처>>>");
 					 phone= scn.nextLine();
