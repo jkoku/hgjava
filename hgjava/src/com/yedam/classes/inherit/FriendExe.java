@@ -9,11 +9,11 @@ public class FriendExe {
 		Scanner scn = new Scanner(System.in);
 		boolean run = true;
 		
-		FriendApp app = new FriendApp();
+		FriendApp app = new FriendApp(); // trycatch 로 숫자가아닌것입력시 숫자입력하라고 해주기
 		while(run) {
 			System.out.println("1.등록 2.조회 3.수정 4.삭제 9.종료");
 			int menu = Integer.parseInt(scn.nextLine());
-			
+		
 			switch (menu) {
 			case 1 : // 등록. 1)이름연락처 2)학교친구 3)회사 구분해줘야함.
 				System.out.println("1.친구 2.회사 3.학교");

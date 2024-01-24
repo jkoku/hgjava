@@ -29,20 +29,7 @@ public class FriendExe {
 //	}
 //	
 	
-	boolean run = true;
-	static String fname="", fnum="";
-	static int age = 0;
-	
-	//등록메소드
-	public static void insert() {
-		System.out.println("");
-		fname = scn.nextLine();
-		System.out.println("");
-		fnum = scn.nextLine();
-		
-	}
-	
-	
+
 	
 	
 } //end of main

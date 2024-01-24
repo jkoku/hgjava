@@ -30,6 +30,13 @@ public class CalendarExe {
 	// drawCalendar(2024, 1)
 	//2024-03-01 하면 해당월이 나올수 있도록.. 오버로딩 같은메소드이름 여러개 정해서쓰는데
 	static void drawCalendar(Date date) {
+		Calendar cal = Calendar.getInstance();
+		int year = 0;
+		int month = 0;
+		cal.set(year, month -1 , 1 );
+		
+		
+		
 		
 	}
 	
@@ -39,6 +46,7 @@ public class CalendarExe {
 		//(2024, 1)
 		Calendar cal = Calendar.getInstance();
 		cal.set(year, month -1 , 1 ); //set 이 연월일 넣게하는 메소드 /1일에 요일정보부터필요하니까
+		
 		
 		
 		int pos = cal.get(Calendar.DAY_OF_WEEK) - 1;
