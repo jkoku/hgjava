@@ -11,7 +11,7 @@ private static String weightInput;
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		boolean run = true; //사용자가 종료라는 말을 하기 전까지는 반복
-		Friend [] friends = new Friend[5]; // {null,null,null,null,null} 객체값의 현재 모양
+		//Friend [] friends = new Friend[5]; // {null,null,null,null,null} 객체값의 현재 모양
 		
 		int score = 0;
 		double weight = 0;

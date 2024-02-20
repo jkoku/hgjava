@@ -52,6 +52,7 @@ public class EmpApp {
 					}
 				}
 				break;
+				
 			case 9:// 종료
 				run = false ;
 				System.out.println("종료!");
